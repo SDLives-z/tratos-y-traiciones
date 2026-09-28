@@ -1,1 +1,120 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  padding: 15px;
+  background: #14152b;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  color: #ffd166;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #06d6a0;
+}
+
+input {
+  width: 90%;
+  max-width: 300px;
+  padding: 13px;
+  margin: 6px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 13px 18px;
+  margin: 6px;
+  border: 0;
+  border-radius: 10px;
+  background: #ef476f;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 25px 0;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin: 15px auto;
+}
+
+.casilla {
+  min-height: 65px;
+  padding: 5px;
+  border-radius: 8px;
+  background: #292b52;
+  border: 2px solid #45476d;
+  font-size: 11px;
+}
+
+.casilla b {
+  display: block;
+  color: #ffd166;
+}
+
+#jugadores,
+#listaJugadores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jugador {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #292b52;
+}
+
+#mensaje,
+#error {
+  min-height: 30px;
+  color: #ffd166;
+  font-weight: bold;
+}
+
+#error {
+  color: #ef476f;
+}
+
+.oculto {
+  display: none !important;
+}
+
+@media (max-width: 450px) {
+  #tablero {
+    gap: 3px;
+  }
+
+  .casilla {
+    min-height: 55px;
+    font-size: 9px;
+  }
+}
