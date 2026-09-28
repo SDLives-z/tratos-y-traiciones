@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratos y Traiciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <main>
+    <h1>Tratos y Traiciones</h1>
+    <p>Juego multijugador para 3 personas</p>
+
+    <section id="inicio">
+      <input id="nombre" placeholder="Tu nombre" maxlength="15">
+
+      <button onclick="crearSala()">
+        Crear sala
+      </button>
+
+      <hr>
+
+      <input id="codigo" placeholder="Código de sala" maxlength="4">
+
+      <button onclick="unirseSala()">
+        Unirse a sala
+      </button>
+
+      <p id="error"></p>
+    </section>
+
+    <section id="espera" class="oculto">
+      <h2>Sala: <span id="codigoSala"></span></h2>
+      <p>Comparte este código con los otros jugadores.</p>
+      <div id="listaJugadores"></div>
+      <p id="estadoSala">Esperando jugadores...</p>
+    </section>
+
+    <section id="partida" class="oculto">
+      <h2 id="turno"></h2>
+
+      <div id="tablero"></div>
+
+      <div id="informacion"></div>
+
+      <button id="botonDado" onclick="tirarDado()">
+        Tirar dado
+      </button>
+
+      <p id="mensaje"></p>
+
+      <h3>Jugadores</h3>
+      <div id="jugadores"></div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
